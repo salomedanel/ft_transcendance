@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+
+  postgres:
+    image: postgres:16.1
+    restart: always
+    ports:
+      - 5432:5432
+    container_name: postgres
+    env_file:
+      - ./backend/.env
+    networks:
+      - transcendance
+    volumes:
+      - data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "mydb", "-U", "alexis"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    
+  backend:
+    build: ./backend
+    image: backend:latest
+    restart: unless-stopped
+    ports:
+      - 3333:3333
+      - 3080:3080
+      - 3090:3090
+      - 5555:5555
+    container_name: backend_container
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - postgres
+    networks:
+      - transcendance
+    
+  frontend:
+    build: ./frontEnd
+    image: frontend:latest
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    container_name: frontend_container
+    env_file:
+      - ./frontEnd/.env
+    depends_on:
+      - backend
+    networks:
+      - transcendance
+  
+  
+
+volumes:
+  data:
+
+networks:
+  transcendance:
+    driver: bridge

@@ -1,0 +1,94 @@
+.PongTable {
+  margin: 20px;
+  color: #C101A4;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #1a1a1a;
+}
+
+th, td {
+  border: 1px solid #C101A4;
+  padding: 10px;
+  text-align: center;
+}
+
+.mainTitle {
+  font-size: 24px;
+}
+
+.otherTab {
+  font-size: 18px;
+}
+
+.lineTab:nth-child(odd) {
+  background-color: #1a1a1a;
+}
+
+.lineTab:nth-child(even) {
+  background-color: #000;
+}
+
+.cellPlayer {
+  font-weight: bold;
+}
+
+/* Style the vs separator */
+td:nth-child(3) {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.JoinStyle {
+  padding: 10px 20px;
+  background-color: #C101A4;
+  color: #1a1a1a;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+.JoinStyle:hover {
+  background-color: hsl(309, 99%, 78%);
+}
+
+.color-picker-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: rgba(196, 53, 53, 0);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #C101A4;
+  }
+
+  .my-title-class {
+	color: #C101A4;
+  }
+  
+  .my-popup-class {
+	background-color: #1a1a1a;
+  }
+  
+  .my-cancel-button-class {
+	background-color: #C101A4 !important;
+	color: #1a1a1a !important;
+  }

@@ -1,0 +1,36 @@
+
+.footer {
+    background: #800080;
+    background: -webkit-linear-gradient(to right, #ffc0cb, #800080); 
+    background: linear-gradient(to right, #ffc0cb, #800080); 
+
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    font-size: 12px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .footer h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer li {
+    margin-bottom: 5px;
+  }
+  

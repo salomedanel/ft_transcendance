@@ -1,0 +1,70 @@
+.ChatContainer {
+    background-color: #C101A4;
+    color: #1a1a1a;
+    padding: 10px;
+    max-width: 800px; 
+    margin: 0 auto; 
+    border: 2px solid #C101A4; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px #C101A4; 
+}
+
+.chatMessage {
+    flex-grow: 1;
+    word-wrap: break-word; 
+    overflow: hidden;
+}
+
+
+.ChatMessageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatUsername {
+    color: #FFD700; 
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.chatDate {
+    font-size: 0.8em;
+    color: #808080;
+    margin-right: 10px;
+}
+
+.ChatMessagesender {
+    display: flex;
+    background-color: #C101A4;
+    padding: 10px;
+    border: 2px solid #C101A4; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px #C101A4;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ChatInput {
+    flex-grow: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #C101A4;
+}
+
+.ButtonSendChat {
+    background-color: #1a1a1a;
+    color: #C101A4;
+    border: 2px solid #00FFFF;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ButtonSendChat:hover {
+    background-color: #00FFFF;
+}

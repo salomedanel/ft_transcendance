@@ -1,0 +1,15 @@
+.canvasBoard {
+    outline: solid 1px #C101A4;
+    border: solid 1px #1a1a1a;
+    animation: outline-shine 1s infinite alternate;
+    margin-top: 15px;
+  }
+  
+  @keyframes outline-shine {
+    0% {
+      outline-color: #C101A4;
+    }
+    100% {
+      outline-color: #FF66FF;
+    }
+  }

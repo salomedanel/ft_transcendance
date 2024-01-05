@@ -1,0 +1,47 @@
+.ChannelListsContainer {
+    display: flex;
+    justify-content: space-between;
+    max-height: 300px; 
+    overflow-y: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 20px;
+}
+
+.Channel {
+    cursor: pointer;
+    color: #d897cd;
+    margin: 10px;
+
+    animation: neon 5s infinite alternate;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #C101A4;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+
+.ChannelListTitle {
+    text-align: center;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 5px #C101A4, 0 0 10px #C101A4, 0 0 20px #C101A4; /* Adjust the shadow values */
+
+        opacity: 0.8;
+    }
+    100% {
+        text-shadow: 0 0 10px #C101A4, 0 0 20px #C101A4, 0 0 40px #C101A4; /* Adjust the shadow values */
+        opacity: 1;
+    }
+}

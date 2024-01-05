@@ -1,0 +1,36 @@
+  .dropdown-menu {
+    display: list-item;
+    position: absolute;
+    text-align: left;
+    right: 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+  }
+  
+  .dropdown-menu a {
+    display: list-item;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #F1C7F2;
+    margin: 0;
+    display: list-item;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+
+  }
+
+  .menu-icon {
+    font-size: 30px;
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-top: 6px;
+    align-items: center;
+  }

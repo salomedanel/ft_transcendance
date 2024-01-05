@@ -1,0 +1,107 @@
+.profile-details-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 40px;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    max-width: 100%; 
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 2px solid white;
+  }
+  
+  .profile-info {
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 20px;
+    flex-grow: 1;
+  }
+  
+  .account-details {
+    text-align: right;
+    margin-right: 40px;
+  }
+  
+  .account-details p {
+    color: #555;
+  }
+
+  .friend-list {
+    list-style: none;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  
+  .friend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+	cursor: pointer;
+  }
+  
+  .avatarFriends {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .friend-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .friend-name {
+    font-size: 25px;
+    font-weight: bold;
+    color: #C101A4;
+  }
+  
+  .status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 5px;
+  }
+  
+  .status-indicator.online {
+    background-color: green;
+  }
+  
+  .status-indicator.playing {
+    background-color: orange;
+  }
+  
+  .status-indicator.offline {
+    background-color: red;
+  }
+
+  .game-history-table-container {
+    overflow-y: auto;
+    max-height: 300px;
+  }
+  
+  .game-history-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .game-history-table tr {
+    color: hsl(320, 100%, 90%); 
+  }
+  
+ .winner {
+  color: #C101A4; 
+  text-shadow: 0 0 10px #FF66CC; 
+ }
+
+ .game-history-table td {
+  color: #C101A4;
+ }
+  
+  

@@ -1,0 +1,47 @@
+.match-history {
+  max-width: 550px;
+  margin: 40px auto 20px 40px;
+  text-align: left;
+  border: 2px solid white;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.match-history::-webkit-scrollbar {
+  width: 12px;
+}
+
+.match-history::-webkit-scrollbar-thumb {
+  background-color: #C101A4;
+}
+
+.match-history-header {
+    margin: 0;
+    background-color: #C101A4;;
+    font-size: 20px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    color: white;
+    padding: 8px;
+  }
+  
+  .match-item {
+    margin: 0;
+    padding: 8px;
+  }
+
+  .match-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .match-item hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    height: 1px;
+    background-color: white;
+  }

@@ -1,0 +1,126 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int         @id @default(autoincrement())
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  email         String      @unique
+  username      String?     @unique
+  avatarUrl     String?
+  files         File[]      @relation("file")
+
+  accessToken   String?     @unique
+  refreshToken  String?     @unique
+
+  twoFactorAuth  Boolean?   @default(false)
+  twoFactorActive Boolean?  @default(false)
+  twoFactorSecret String?
+  twoFactorVerified Boolean? @default(false)
+
+  status Status?            @default(OFFLINE)
+
+  friends           Int[]       @default([])
+  blockedUser       Int[]       @default([])
+
+  messages      Message[]
+
+  members           Channel[]   @relation("members")
+  owners            Channel[]   @relation("owners")
+  admins            Channel[]   @relation("admins")
+  muted            Channel[]   @relation("muted")
+  banned           Channel[]   @relation("banned")
+  invited          Channel[]   @relation("invited")
+
+  games            Game[]      @relation("player")
+  
+  @@unique([id, email])
+}
+
+model File {
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  content       Bytes
+  name          String
+  mimetype      String
+  owner         User[]    @relation("file")
+}
+
+model Channel {
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  name          String
+  password      String?
+
+  isPasswordProtected Boolean? @default(false)
+  isDM                Boolean? @default(false)
+  isPrivate           Boolean? @default(false)
+
+  messages      Message[] 
+
+  members       User[]    @relation("members")
+  owners        User[]    @relation("owners")
+  admins        User[]    @relation("admins")
+  banned        User[]    @relation("banned")
+  muted         User[]    @relation("muted")
+  invited       User[]    @relation("invited")
+
+  @@unique([id])
+}
+
+model Message {
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  message       String
+
+  owner         User      @relation(fields: [ownerId], references: [id])
+  ownerId       Int
+
+  channel       Channel   @relation(fields: [channelId], references: [id])
+  channelId     Int
+
+  @@unique([id])
+}
+
+enum Status {
+  ONLINE
+  OFFLINE
+  PLAYING
+}
+
+model Game {
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  playerName        String
+  roomName          String     @unique
+  status            GameStatus @default(WAITING)
+  players           User[]    @relation("player")
+  score             Int[]
+  winner			String		@default("none")
+
+  @@unique([id])
+}
+
+enum GameStatus {
+  WAITING
+  PLAYING
+  FINISHED
+}

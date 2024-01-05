@@ -1,0 +1,52 @@
+.UserListStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.UserListStyle > div,
+.UserListStyle > button {
+    flex: 1;
+    margin-right: 10px;
+}
+
+
+.UserListStyle button {
+    padding: 10px;
+    background-color: #C101A4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.UserListStyle button:hover {
+    background-color: hsl(309, 99%, 45%);
+}
+
+.UserButtonsStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.UserButtonsStyle button {
+    margin: 0 10px;
+    padding: 12px;
+    background-color: #C101A4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.UserButtonsStyle button:hover {
+    background-color: #ff4d9e;
+}
+
+.saberHr {
+    height: 3px;
+    background: linear-gradient(to right, #C101A4, transparent, #C101A4); /* Use a linear gradient for the color transition */
+    border: none;
+    margin: 10px 0; 
+}

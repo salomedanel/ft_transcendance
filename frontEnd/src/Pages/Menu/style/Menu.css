@@ -1,0 +1,59 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #C101A4;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Lexend, sans-serif;
+}
+
+.left {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.left a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.right a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.right img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.avatar-container {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: -30px;
+}
+
+.avatar {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
